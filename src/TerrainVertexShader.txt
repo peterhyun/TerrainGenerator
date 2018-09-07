@@ -1,0 +1,33 @@
+#version 330 core
+layout (location = 0) in vec3 aPos;
+layout (location = 1) in vec3 aNormal;
+
+uniform mat4 model;
+uniform mat4 view;
+uniform mat4 projection;
+
+float scale = 0.5;
+
+out vec2 TexX;
+out vec2 TexY;
+out vec2 TexZ;
+out vec3 blend_weights;
+out vec3 FragPos;
+out vec3 wNormal;
+
+void main()
+{
+	FragPos = vec3(model * vec4(aPos, 1.0));	
+	blend_weights = abs(aNormal.xyz);
+	blend_weights = (blend_weights - 0.2) * 0.7;
+	blend_weights = max(blend_weights, 0);
+	blend_weights /= (blend_weights.x + blend_weights.y + blend_weights.z);
+
+	TexX = aPos.yz * scale;
+	TexY = aPos.zx * scale;	
+	TexZ = aPos.xy * scale;
+
+	wNormal = mat3(transpose(inverse(model))) * aNormal;
+
+	gl_Position = projection * view * vec4(FragPos, 1.0);
+}
