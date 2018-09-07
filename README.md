@@ -10,3 +10,6 @@ I used GL_TRIANGLE_STRIP to make the terrains. Here are the grids that made this
 
 I also made the grids considering the command glEnable(GL_CULL_FACE);
 The indices algorithm was developed by me.
+
+For putting on textures, I used the 3D planar projection method, which can be found in section 1.5 of this link 
+https://developer.nvidia.com/gpugems/GPUGems3/gpugems3_ch01.html
