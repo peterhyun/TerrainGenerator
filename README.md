@@ -2,7 +2,7 @@
 This is a terrain generating program based on OpenGL and GLFW.
 Note that the basic Camera header and Shader header files were based on https://learnopengl.com/
 
-This is the result of the screenshot
+This is the screenshot of the result.
 ![Screenshot](screenshots/Terrain.png)
 
 I used GL_TRIANGLE_STRIP to make the terrains. Here are the grids that made this terrain.
