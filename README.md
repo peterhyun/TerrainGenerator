@@ -1,11 +1,12 @@
-# Terrain
-This is a terrain generating program based on OpenGL and GLFW.
+# TerrainGenerator
+This is a terrain generating program based on a heightmap.
+I used OpenGL version 3.3 and GLFW for this program.
 Note that the basic Camera header and Shader header files were based on https://learnopengl.com/
 
 This is the screenshot of the result.
 ![Screenshot](screenshots/Terrain.png)
 
-I used GL_TRIANGLE_STRIP and a heightmap to make the terrains. Here are the grids that form this terrain.
+I used GL_TRIANGLE_STRIP to make the terrains. Here are the grids that form this terrain.
 ![Screenshot](screenshots/TerrainGrid.png)
 
 I also made the sequence of the indices of the vertices, considering the command glEnable(GL_CULL_FACE). Therefore the performance is significantly better than algorithms that don't use face culling.  
