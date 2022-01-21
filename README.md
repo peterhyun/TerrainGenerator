@@ -9,7 +9,8 @@ This is the screenshot of the result.
 I used GL_TRIANGLE_STRIP to make the terrains. Here are the grids that form this terrain.
 ![Screenshot](screenshots/TerrainGrid.png)
 
-I also made the sequence of the indices of the vertices, considering the command glEnable(GL_CULL_FACE). Therefore the performance is significantly better than algorithms that don't use face culling.  
-I came up with the algorithm which sets the order of the indices in order to do face culling.  
-For putting on textures, I used the 3D planar projection method, which can be found in section 1.5 of this link 
+I also made the sequence of the indices of the vertices so that the faces not showing will be culled via the command glEnable(GL_CULL_FACE). Therefore the performance is significantly better than algorithms that don't use face culling.
+
+For putting on textures, I used the 3D planar projection method, which can be found in section 1.5 of this link
 https://developer.nvidia.com/gpugems/GPUGems3/gpugems3_ch01.html
+This prevented the textures from being too stretched on steep slopes.
