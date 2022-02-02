@@ -1,4 +1,6 @@
 # TerrainGenerator
+>Jeehoon Hyun, April 2017
+
 This is a terrain generating program based on a heightmap. One of the most beginner projects I tried right after learning OpenGL.
 I used OpenGL version 3.3 and GLFW for this program.
 Note that the basic Camera header and Shader header files were based on https://learnopengl.com/
